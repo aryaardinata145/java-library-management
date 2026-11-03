@@ -57,54 +57,7 @@ public class Perpustakaan {
         inputKeyboard.close();
     }
 
-    String rapikanKolomTabel(String teksKolom, int lebarKolom) {
-        while (teksKolom.length() < lebarKolom) {
-            teksKolom += " ";
-        }
-        return teksKolom;
-    }
-
-    int bacaInputAngka(String pesanInput) {
-        while (true) {
-            System.out.print(pesanInput);
-            if (inputKeyboard.hasNextInt()) {
-                int angkaMasukan = inputKeyboard.nextInt();
-                inputKeyboard.nextLine();
-                return angkaMasukan;
-            }
-            System.out.println("Input tidak valid! Masukkan bilangan bulat.");
-            inputKeyboard.nextLine();
-        }
-    }
-
-    String bacaInputTeks(String pesanInput) {
-        while (true) {
-            System.out.print(pesanInput);
-            String teksMasukan = inputKeyboard.nextLine().trim();
-            if (!teksMasukan.isEmpty()) {
-                return teksMasukan;
-            }
-            System.out.println("Input tidak boleh kosong!");
-        }
-    }
-
-    void tampilkanDaftarBuku() {
-        String garisTabel = "+----+-------------------------------+------+";
-        System.out.println("\n--- DAFTAR KOLEKSI BUKU ---");
-        System.out.println(garisTabel);
-        System.out.println("| " + rapikanKolomTabel("ID", 2) + " | "
-                + rapikanKolomTabel("Judul Buku", 29) + " | "
-                + rapikanKolomTabel("Stok", 4) + " |");
-        System.out.println(garisTabel);
-
-        for (int indeks = 0; indeks < daftarBuku.length; indeks++) {
-            Buku dataBuku = daftarBuku[indeks];
-            System.out.println("| " + rapikanKolomTabel("" + dataBuku.idBuku, 2) + " | "
-                    + rapikanKolomTabel(dataBuku.judulBuku, 29) + " | "
-                    + rapikanKolomTabel("" + dataBuku.stokBuku, 4) + " |");
-        }
-        System.out.println(garisTabel);
-    }
+    // Proses peminjaman dan pengembalian
 
     void prosesPinjamBuku() {
         if (jumlahTransaksiPeminjaman >= daftarRiwayatPeminjaman.length) {
@@ -151,13 +104,13 @@ public class Perpustakaan {
         System.out.println("\n+================================================+");
         System.out.println("|                BUKTI PEMINJAMAN                |");
         System.out.println("+================================================+");
-        System.out.println("| ID Peminjaman     : " + rapikanKolomTabel("" + transaksiBaru.idPeminjaman, 26) + " |");
-        System.out.println("| NPM Peminjam      : " + rapikanKolomTabel(transaksiBaru.npmPeminjam, 26) + " |");
-        System.out.println("| Nama Peminjam     : " + rapikanKolomTabel(transaksiBaru.namaPeminjam, 26) + " |");
-        System.out.println("| Judul Buku        : " + rapikanKolomTabel(bukuDipinjam.judulBuku, 26) + " |");
-        System.out.println("| Sisa Stok Buku    : " + rapikanKolomTabel("" + bukuDipinjam.stokBuku, 26) + " |");
-        System.out.println("| Batas Bebas Denda : " + rapikanKolomTabel(BATAS_HARI_PINJAM + " hari", 26) + " |");
-        System.out.println("| Denda Terlambat   : " + rapikanKolomTabel("Rp" + DENDA_PER_HARI + "/hari", 26) + " |");
+        System.out.println("| ID Peminjaman     : " + formatKolom("" + transaksiBaru.idPeminjaman, 26) + " |");
+        System.out.println("| NPM Peminjam      : " + formatKolom(transaksiBaru.npmPeminjam, 26) + " |");
+        System.out.println("| Nama Peminjam     : " + formatKolom(transaksiBaru.namaPeminjam, 26) + " |");
+        System.out.println("| Judul Buku        : " + formatKolom(bukuDipinjam.judulBuku, 26) + " |");
+        System.out.println("| Sisa Stok Buku    : " + formatKolom("" + bukuDipinjam.stokBuku, 26) + " |");
+        System.out.println("| Batas Bebas Denda : " + formatKolom(BATAS_HARI_PINJAM + " hari", 26) + " |");
+        System.out.println("| Denda Terlambat   : " + formatKolom("Rp" + DENDA_PER_HARI + "/hari", 26) + " |");
         System.out.println("+================================================+");
     }
 
@@ -177,19 +130,19 @@ public class Perpustakaan {
         String garisTabel = "+----+--------------+----------------------+-------------------------------+";
         System.out.println("\n--- DAFTAR PINJAMAN YANG BELUM DIKEMBALIKAN ---");
         System.out.println(garisTabel);
-        System.out.println("| " + rapikanKolomTabel("ID", 2) + " | "
-                + rapikanKolomTabel("NPM", 12) + " | "
-                + rapikanKolomTabel("Nama Peminjam", 20) + " | "
-                + rapikanKolomTabel("Judul Buku", 29) + " |");
+        System.out.println("| " + formatKolom("ID", 2) + " | "
+                + formatKolom("NPM", 12) + " | "
+                + formatKolom("Nama Peminjam", 20) + " | "
+                + formatKolom("Judul Buku", 29) + " |");
         System.out.println(garisTabel);
 
         for (int indeks = 0; indeks < jumlahTransaksiPeminjaman; indeks++) {
             Peminjaman dataTransaksi = daftarRiwayatPeminjaman[indeks];
             if (!dataTransaksi.sudahDikembalikan) {
-                System.out.println("| " + rapikanKolomTabel("" + dataTransaksi.idPeminjaman, 2) + " | "
-                        + rapikanKolomTabel(dataTransaksi.npmPeminjam, 12) + " | "
-                        + rapikanKolomTabel(dataTransaksi.namaPeminjam, 20) + " | "
-                        + rapikanKolomTabel(daftarBuku[dataTransaksi.indeksBuku].judulBuku, 29) + " |");
+                System.out.println("| " + formatKolom("" + dataTransaksi.idPeminjaman, 2) + " | "
+                        + formatKolom(dataTransaksi.npmPeminjam, 12) + " | "
+                        + formatKolom(dataTransaksi.namaPeminjam, 20) + " | "
+                        + formatKolom(daftarBuku[dataTransaksi.indeksBuku].judulBuku, 29) + " |");
             }
         }
         System.out.println(garisTabel);
@@ -227,15 +180,35 @@ public class Perpustakaan {
         System.out.println("\n+================================================+");
         System.out.println("|               BUKTI PENGEMBALIAN               |");
         System.out.println("+================================================+");
-        System.out.println("| ID Peminjaman     : " + rapikanKolomTabel("" + transaksiTerpilih.idPeminjaman, 26) + " |");
-        System.out.println("| NPM Peminjam      : " + rapikanKolomTabel(transaksiTerpilih.npmPeminjam, 26) + " |");
-        System.out.println("| Nama Peminjam     : " + rapikanKolomTabel(transaksiTerpilih.namaPeminjam, 26) + " |");
-        System.out.println("| Judul Buku        : " + rapikanKolomTabel(bukuDikembalikan.judulBuku, 26) + " |");
-        System.out.println("| Lama Peminjaman   : " + rapikanKolomTabel(transaksiTerpilih.lamaPinjamHari + " hari", 26) + " |");
-        System.out.println("| Keterlambatan     : " + rapikanKolomTabel(jumlahHariTerlambat + " hari", 26) + " |");
-        System.out.println("| Total Denda       : " + rapikanKolomTabel("Rp" + transaksiTerpilih.totalDenda, 26) + " |");
-        System.out.println("| Stok Buku Saat Ini: " + rapikanKolomTabel("" + bukuDikembalikan.stokBuku, 26) + " |");
+        System.out.println("| ID Peminjaman     : " + formatKolom("" + transaksiTerpilih.idPeminjaman, 26) + " |");
+        System.out.println("| NPM Peminjam      : " + formatKolom(transaksiTerpilih.npmPeminjam, 26) + " |");
+        System.out.println("| Nama Peminjam     : " + formatKolom(transaksiTerpilih.namaPeminjam, 26) + " |");
+        System.out.println("| Judul Buku        : " + formatKolom(bukuDikembalikan.judulBuku, 26) + " |");
+        System.out.println("| Lama Peminjaman   : " + formatKolom(transaksiTerpilih.lamaPinjamHari + " hari", 26) + " |");
+        System.out.println("| Keterlambatan     : " + formatKolom(jumlahHariTerlambat + " hari", 26) + " |");
+        System.out.println("| Total Denda       : " + formatKolom("Rp" + transaksiTerpilih.totalDenda, 26) + " |");
+        System.out.println("| Stok Buku Saat Ini: " + formatKolom("" + bukuDikembalikan.stokBuku, 26) + " |");
         System.out.println("+================================================+");
+    }
+
+    // Tampilan daftar buku dan riwayat
+
+    void tampilkanDaftarBuku() {
+        String garisTabel = "+----+-------------------------------+------+";
+        System.out.println("\n--- DAFTAR KOLEKSI BUKU ---");
+        System.out.println(garisTabel);
+        System.out.println("| " + formatKolom("ID", 2) + " | "
+                + formatKolom("Judul Buku", 29) + " | "
+                + formatKolom("Stok", 4) + " |");
+        System.out.println(garisTabel);
+
+        for (int indeks = 0; indeks < daftarBuku.length; indeks++) {
+            Buku dataBuku = daftarBuku[indeks];
+            System.out.println("| " + formatKolom("" + dataBuku.idBuku, 2) + " | "
+                    + formatKolom(dataBuku.judulBuku, 29) + " | "
+                    + formatKolom("" + dataBuku.stokBuku, 4) + " |");
+        }
+        System.out.println(garisTabel);
     }
 
     void tampilkanRiwayatPeminjaman() {
@@ -247,13 +220,13 @@ public class Perpustakaan {
 
         String garisTabel = "+----+--------------+----------------------+-------------------------------+--------------------+-------------+------------+";
         System.out.println(garisTabel);
-        System.out.println("| " + rapikanKolomTabel("ID", 2) + " | "
-                + rapikanKolomTabel("NPM", 12) + " | "
-                + rapikanKolomTabel("Nama Peminjam", 20) + " | "
-                + rapikanKolomTabel("Judul Buku", 29) + " | "
-                + rapikanKolomTabel("Status", 18) + " | "
-                + rapikanKolomTabel("Lama Pinjam", 11) + " | "
-                + rapikanKolomTabel("Denda", 10) + " |");
+        System.out.println("| " + formatKolom("ID", 2) + " | "
+                + formatKolom("NPM", 12) + " | "
+                + formatKolom("Nama Peminjam", 20) + " | "
+                + formatKolom("Judul Buku", 29) + " | "
+                + formatKolom("Status", 18) + " | "
+                + formatKolom("Lama Pinjam", 11) + " | "
+                + formatKolom("Denda", 10) + " |");
         System.out.println(garisTabel);
 
         int jumlahPinjamanAktif = 0;
@@ -265,13 +238,13 @@ public class Perpustakaan {
             String teksLamaPinjam = dataTransaksi.sudahDikembalikan ? (dataTransaksi.lamaPinjamHari + " hari") : "-";
             String teksDenda = dataTransaksi.sudahDikembalikan ? ("Rp" + dataTransaksi.totalDenda) : "-";
 
-            System.out.println("| " + rapikanKolomTabel("" + dataTransaksi.idPeminjaman, 2) + " | "
-                    + rapikanKolomTabel(dataTransaksi.npmPeminjam, 12) + " | "
-                    + rapikanKolomTabel(dataTransaksi.namaPeminjam, 20) + " | "
-                    + rapikanKolomTabel(daftarBuku[dataTransaksi.indeksBuku].judulBuku, 29) + " | "
-                    + rapikanKolomTabel(teksStatus, 18) + " | "
-                    + rapikanKolomTabel(teksLamaPinjam, 11) + " | "
-                    + rapikanKolomTabel(teksDenda, 10) + " |");
+            System.out.println("| " + formatKolom("" + dataTransaksi.idPeminjaman, 2) + " | "
+                    + formatKolom(dataTransaksi.npmPeminjam, 12) + " | "
+                    + formatKolom(dataTransaksi.namaPeminjam, 20) + " | "
+                    + formatKolom(daftarBuku[dataTransaksi.indeksBuku].judulBuku, 29) + " | "
+                    + formatKolom(teksStatus, 18) + " | "
+                    + formatKolom(teksLamaPinjam, 11) + " | "
+                    + formatKolom(teksDenda, 10) + " |");
 
             if (dataTransaksi.sudahDikembalikan) {
                 akumulasiTotalDenda += dataTransaksi.totalDenda;
@@ -285,10 +258,43 @@ public class Perpustakaan {
         System.out.println("\n+-----------------------------------+------------+");
         System.out.println("| RINGKASAN RIWAYAT TRANSAKSI       | JUMLAH     |");
         System.out.println("+-----------------------------------+------------+");
-        System.out.println("| Total Transaksi Peminjaman        | " + rapikanKolomTabel("" + jumlahTransaksiPeminjaman, 10) + " |");
-        System.out.println("| Pinjaman Masih Aktif              | " + rapikanKolomTabel("" + jumlahPinjamanAktif, 10) + " |");
-        System.out.println("| Pinjaman Sudah Dikembalikan       | " + rapikanKolomTabel("" + jumlahSudahDikembalikan, 10) + " |");
-        System.out.println("| Total Akumulasi Denda Tercatat    | " + rapikanKolomTabel("Rp" + akumulasiTotalDenda, 10) + " |");
+        System.out.println("| Total Transaksi Peminjaman        | " + formatKolom("" + jumlahTransaksiPeminjaman, 10) + " |");
+        System.out.println("| Pinjaman Masih Aktif              | " + formatKolom("" + jumlahPinjamanAktif, 10) + " |");
+        System.out.println("| Pinjaman Sudah Dikembalikan       | " + formatKolom("" + jumlahSudahDikembalikan, 10) + " |");
+        System.out.println("| Total Akumulasi Denda Tercatat    | " + formatKolom("Rp" + akumulasiTotalDenda, 10) + " |");
         System.out.println("+-----------------------------------+------------+");
+    }
+
+    String formatKolom(String teksKolom, int lebarKolom) {
+        while (teksKolom.length() < lebarKolom) {
+            teksKolom += " ";
+        }
+        return teksKolom;
+    }
+
+    // Input pengguna
+
+    int bacaInputAngka(String pesanInput) {
+        while (true) {
+            System.out.print(pesanInput);
+            if (inputKeyboard.hasNextInt()) {
+                int angkaMasukan = inputKeyboard.nextInt();
+                inputKeyboard.nextLine();
+                return angkaMasukan;
+            }
+            System.out.println("Input tidak valid! Masukkan bilangan bulat.");
+            inputKeyboard.nextLine();
+        }
+    }
+
+    String bacaInputTeks(String pesanInput) {
+        while (true) {
+            System.out.print(pesanInput);
+            String teksMasukan = inputKeyboard.nextLine().trim();
+            if (!teksMasukan.isEmpty()) {
+                return teksMasukan;
+            }
+            System.out.println("Input tidak boleh kosong!");
+        }
     }
 }
