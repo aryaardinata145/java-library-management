@@ -97,9 +97,147 @@ java MainApp
 
 ---
 
-## Contributor
+## ✨ Contributors & Development Team
 
-1. [DhilHUB07](https://github.com/DhilHUB07), M. Fadhil Ramadhan, G1A026006, ketua
-2. [putr1nabilaayz-beep](https://github.com/putr1nabilaayz-beep), Putri Nabila, G1A0260018, anggota
-3. [abrarmuzakki22](https://github.com/abrarmuzakki22), Muhammad Abrar Muzakki, G1A026034, anggota
-4. [aryaardinata145](https://github.com/aryaardinata145), Arya Ardinata, G1A026040, anggota
+<div align="center">
+
+<!-- Animated Typing Header -->
+<a href="https://github.com/DhilHUB07">
+  <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=24&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=Kelompok+3+%E2%80%94+Pemrograman+Komputer+(Kompro);Program+Studi+Informatika+%E2%80%94+Universitas+Bengkulu;Perpustakaan+Sederhana+Berbasis+Java+OOP+%F0%9F%93%9A" alt="Kelompok 3 Typing Banner" />
+</a>
+
+<p>
+  <img src="https://img.shields.io/badge/Kelompok_3-Kompro_2026-3B82F6?style=for-the-badge&logo=openjdk&logoColor=white" alt="Kelompok 3"/>
+  <img src="https://img.shields.io/badge/Informatika-Universitas_Bengkulu-F59E0B?style=for-the-badge&logo=googlescholar&logoColor=white" alt="UNIB"/>
+  <img src="https://img.shields.io/badge/Team_Size-4_Contributors-10B981?style=for-the-badge&logo=github&logoColor=white" alt="4 Contributors"/>
+</p>
+
+<table>
+  <tr>
+    <!-- 1. M. Fadhil Ramadhan -->
+    <td align="center" width="220px">
+      <br />
+      <a href="https://github.com/DhilHUB07">
+        <img src="https://github.com/DhilHUB07.png" width="120px" style="border-radius: 50%; border: 3px solid #F59E0B;" alt="M. Fadhil Ramadhan"/>
+      </a>
+      <br /><br />
+      <a href="https://github.com/DhilHUB07">
+        <b>M. Fadhil Ramadhan</b>
+      </a>
+      <br />
+      <img src="https://img.shields.io/badge/NPM-G1A026006-F59E0B?style=flat-square&labelColor=1e293b" alt="G1A026006"/>
+      <br /><br />
+      <img src="https://img.shields.io/badge/%F0%9F%91%91_Ketua_Kelompok-F59E0B?style=flat-square&labelColor=78350F&color=F59E0B" alt="Ketua Kelompok"/>
+      <br /><br />
+      <a href="https://github.com/DhilHUB07">
+        <img src="https://img.shields.io/badge/GitHub-DhilHUB07-181717?style=flat&logo=github&logoColor=white" alt="GitHub DhilHUB07"/>
+      </a>
+      <br />
+      <a href="https://github.com/DhilHUB07">
+        <img src="https://img.shields.io/github/followers/DhilHUB07?label=Follow&style=social" alt="Follow DhilHUB07"/>
+      </a>
+      <br /><br />
+    </td>
+    <!-- 2. Putri Nabila -->
+    <td align="center" width="220px">
+      <br />
+      <a href="https://github.com/putr1nabilaayz-beep">
+        <img src="https://github.com/putr1nabilaayz-beep.png" width="120px" style="border-radius: 50%; border: 3px solid #EC4899;" alt="Putri Nabila"/>
+      </a>
+      <br /><br />
+      <a href="https://github.com/putr1nabilaayz-beep">
+        <b>Putri Nabila</b>
+      </a>
+      <br />
+      <img src="https://img.shields.io/badge/NPM-G1A026018-EC4899?style=flat-square&labelColor=1e293b" alt="G1A026018"/>
+      <br /><br />
+      <img src="https://img.shields.io/badge/%F0%9F%91%A9%E2%80%8D%F0%9F%92%BB_Anggota_Tim-EC4899?style=flat-square&labelColor=831843&color=EC4899" alt="Anggota"/>
+      <br /><br />
+      <a href="https://github.com/putr1nabilaayz-beep">
+        <img src="https://img.shields.io/badge/GitHub-putr1nabilaayz--beep-181717?style=flat&logo=github&logoColor=white" alt="GitHub putr1nabilaayz-beep"/>
+      </a>
+      <br />
+      <a href="https://github.com/putr1nabilaayz-beep">
+        <img src="https://img.shields.io/github/followers/putr1nabilaayz-beep?label=Follow&style=social" alt="Follow putr1nabilaayz-beep"/>
+      </a>
+      <br /><br />
+    </td>
+    <!-- 3. Muhammad Abrar Muzakki -->
+    <td align="center" width="220px">
+      <br />
+      <a href="https://github.com/abrarmuzakki22">
+        <img src="https://github.com/abrarmuzakki22.png" width="120px" style="border-radius: 50%; border: 3px solid #06B6D4;" alt="Muhammad Abrar Muzakki"/>
+      </a>
+      <br /><br />
+      <a href="https://github.com/abrarmuzakki22">
+        <b>Muhammad Abrar Muzakki</b>
+      </a>
+      <br />
+      <img src="https://img.shields.io/badge/NPM-G1A026034-06B6D4?style=flat-square&labelColor=1e293b" alt="G1A026034"/>
+      <br /><br />
+      <img src="https://img.shields.io/badge/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB_Anggota_Tim-06B6D4?style=flat-square&labelColor=164E63&color=06B6D4" alt="Anggota"/>
+      <br /><br />
+      <a href="https://github.com/abrarmuzakki22">
+        <img src="https://img.shields.io/badge/GitHub-abrarmuzakki22-181717?style=flat&logo=github&logoColor=white" alt="GitHub abrarmuzakki22"/>
+      </a>
+      <br />
+      <a href="https://github.com/abrarmuzakki22">
+        <img src="https://img.shields.io/github/followers/abrarmuzakki22?label=Follow&style=social" alt="Follow abrarmuzakki22"/>
+      </a>
+      <br /><br />
+    </td>
+    <!-- 4. Arya Ardinata -->
+    <td align="center" width="220px">
+      <br />
+      <a href="https://github.com/aryaardinata145">
+        <img src="https://github.com/aryaardinata145.png" width="120px" style="border-radius: 50%; border: 3px solid #10B981;" alt="Arya Ardinata"/>
+      </a>
+      <br /><br />
+      <a href="https://github.com/aryaardinata145">
+        <b>Arya Ardinata</b>
+      </a>
+      <br />
+      <img src="https://img.shields.io/badge/NPM-G1A026040-10B981?style=flat-square&labelColor=1e293b" alt="G1A026040"/>
+      <br /><br />
+      <img src="https://img.shields.io/badge/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB_Anggota_Tim-10B981?style=flat-square&labelColor=064E3B&color=10B981" alt="Anggota"/>
+      <br /><br />
+      <a href="https://github.com/aryaardinata145">
+        <img src="https://img.shields.io/badge/GitHub-aryaardinata145-181717?style=flat&logo=github&logoColor=white" alt="GitHub aryaardinata145"/>
+      </a>
+      <br />
+      <a href="https://github.com/aryaardinata145">
+        <img src="https://img.shields.io/github/followers/aryaardinata145?label=Follow&style=social" alt="Follow aryaardinata145"/>
+      </a>
+      <br /><br />
+    </td>
+  </tr>
+</table>
+
+<br />
+
+### 📋 Daftar Kontributor
+
+| No | Nama Lengkap | NPM | GitHub Profile | Status |
+| :-: | :---: | :-: | :-: | :-: |
+| **1** | **M. Fadhil Ramadhan** | `G1A026006` | [![](https://img.shields.io/badge/@DhilHUB07-181717?style=flat-square&logo=github)](https://github.com/DhilHUB07) | 👑 **Ketua** |
+| **2** | **Putri Nabila** | `G1A026018` | [![](https://img.shields.io/badge/@putr1nabilaayz--beep-181717?style=flat-square&logo=github)](https://github.com/putr1nabilaayz-beep) | 👩‍💻 Anggota |
+| **3** | **Muhammad Abrar Muzakki** | `G1A026034` | [![](https://img.shields.io/badge/@abrarmuzakki22-181717?style=flat-square&logo=github)](https://github.com/abrarmuzakki22) | 🧑‍💻 Anggota |
+| **4** | **Arya Ardinata** | `G1A026040` | [![](https://img.shields.io/badge/@aryaardinata145-181717?style=flat-square&logo=github)](https://github.com/aryaardinata145) | 🧑‍💻 Anggota |
+
+<br />
+
+<details>
+<summary><b>🎓 Klik untuk Melihat Informasi Akademik & Dosen Pengampu</b></summary>
+<br />
+
+| Kategori | Keterangan |
+| :--- | :--- |
+| **Mata Kuliah** | Proyek Pengantar Pemrograman (Komputer dan Pemrograman) |
+| **Dosen Pengampu** | 1. Funny Farady Coastera, S.Kom., M.T.<br/>2. Ir. Arie Vatresia, S.T., M.T.I., Ph.D., IPP. |
+| **Program Studi** | Informatika — Fakultas Teknik |
+| **Institusi** | Universitas Bengkulu (UNIB) |
+| **Tahun Akademik** | 2026 |
+
+</details>
+
+</div>
